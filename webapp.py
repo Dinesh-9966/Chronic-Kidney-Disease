@@ -37,7 +37,13 @@ def predict():
 
         prediction = model.predict(input_data)[0]
 
-        return render_template("index.html", result=prediction)
+        # ✅ FIXED OUTPUT
+        if prediction == 1 or prediction == 1.0:
+            result = "CKD (Kidney Disease Detected)"
+        else:
+            result = "NOT CKD (Healthy)"
+
+        return render_template("index.html", result=result)
 
     except Exception as e:
         return f"Error: {str(e)}"
