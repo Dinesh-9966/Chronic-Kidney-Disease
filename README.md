@@ -1,82 +1,120 @@
-# Chronic-Kidney-Disease
-Prediction on Chronic Kidney Disease using Sklearn and Custom ML.
+# 🩺 Kidney Disease Prediction (Flask Web App)
 
-## Instructions to run
-(requires python 3+)
-1. Install all libraries using(requirements file)
+---
+
+## 📌 About Project
+
+This project predicts Chronic Kidney Disease (CKD) using Machine Learning.
+
+It is converted into a web application using Flask and deployed on AWS EC2.
+
+---
+
+## 🚀 Features
+
+* Machine Learning model (Naive Bayes)
+* Flask web application
+* Input form with 24 medical features
+* Auto-fill demo button
+* Real-time prediction
+
+---
+
+## 📂 Dataset
+
+Dataset is already included in this repository:
+
+* dataset/train.csv
+* dataset/test.csv
+
+---
+
+## ⚙️ How to Run on Server (EC2 / Linux)
+
+### 🧩 Step 1: Connect to server
+
+```bash
+ssh ubuntu@YOUR-IP
 ```
-$ pip3 install -r requirements.txt
+
+---
+
+### 🧩 Step 2: Clone repository
+
+```bash
+git clone https://github.com/Dinesh-9966/Chronic-Kidney-Disease.git
+cd Chronic-Kidney-Disease
 ```
-2. Run the ui.py file
+
+---
+
+### 🧩 Step 3: Create virtual environment
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
 ```
-$ python3 ui.py
+
+---
+
+### 🧩 Step 4: Install dependencies
+
+```bash
+pip install -r requirements.txt
+pip install flask
 ```
 
-## Screen
+---
 
-![screen](https://github.com/AP-Atul/Chronic-Kidney-Disease/blob/master/charts/window.png)
+### 🧩 Step 5: Run application
 
-## Few Notes
-The UCI Machine Learning Repository data set includes: 
-Link :: https://archive.ics.uci.edu/ml/datasets/Chronic_Kidney_Disease
-We use 24 + class = 25 ( 11 numeric ,14 nominal) 
+```bash
+python3 webapp.py
+```
 
-Training : 127 records
-Testing : 33 records
+---
 
-* ge - age
-* bp - blood pressure
-* sg - specific gravity
-* al - albumin
-* su - sugar
-* rbc - red blood cells
-* pc - pus cell
-* pcc - pus cell clumps
-* ba - bacteria
-* bgr - blood glucose random
-* bu - blood urea
-* sc - serum creatinine
-* sod - sodium
-* pot - potassium
-* hemo - hemoglobin
-* pcv - packed cell volume
-* wc - white blood cell count
-* rc - red blood cell count
-* htn - hypertension
-* dm - diabetes mellitus
-* cad - coronary artery disease
-* appet - appetite
-* pe - pedal edema
-* ane - anemia
-* class - class
+### 🌍 Step 6: Open in browser
 
-## Classification Algo
-Classes 
-1. Chronic (ckd)
-2. Not Chronic (notckd)
+```
+http://YOUR-IP:5000
+```
 
- * Logistic Regression
- * Naive Bayes
- * KNN
+---
 
-## Accuracies
+## 🎯 Output
 
-(These are the saved models accuracies)
-1. KNN accuracy: 
-    * Custom : 90.62
-    * SKLearn : 90.62
+* CKD (Kidney Disease Detected)
+* NOT CKD (Healthy)
 
-2. NB accuracy:
-    * Custom : 100
-    * SKLearn : 100
+---
 
-3. LR accuracy:
-    * Custom : 68.75
-    * SKLearn : 100
+## 🎓 Improvements Made
 
-## Directory details
-1. dataset : processed csv file
-2. charts : plots to visualize data
-3. lib : custom implementations of all the algos
-4. model : saved pre-trained model (both custom and inbuilt)
-5. custom/ inbuilt : runner files to to prediction (training also)
+* Fixed sklearn errors
+* Converted GUI project to web app
+* Added frontend UI
+* Added auto-fill demo feature
+* Converted numeric output (1.0 → CKD)
+* Deployed on AWS EC2
+
+---
+
+## 👨‍💻 About Me
+
+Hi, I'm **Dinesh** 👋
+I built this project as part of Machine Learning and Web Development learning.
+
+* 🎓 Developer
+* 💡 Interested in AI & ML
+* 🚀 Built and deployed on AWS
+
+---
+
+## 🔗 Connect with Me
+
+* GitHub: https://github.com/Dinesh-9966
+
+---
+
+⭐ If you like this project, give it a star!
