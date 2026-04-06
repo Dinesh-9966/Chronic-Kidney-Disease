@@ -1,37 +1,73 @@
+# 🔄 Project Update
+
+This project was originally a desktop-based Machine Learning application.
+I have upgraded and improved it with the following changes:
+
+## ✅ Changes Made
+
+* Converted GUI-based project → **Flask Web Application**
+* Fixed deprecated sklearn functions (`plot_confusion_matrix`)
+* Fixed dataset path issues
+* Handled missing dependencies and environment setup
+* Added frontend UI using HTML
+* Added **Auto-fill demo feature**
+* Fixed model input (24 features issue)
+* Converted output (`1.0`) → **Readable result (CKD / NOT CKD)**
+* Deployed application on **AWS EC2**
+
+---
+
 # 🩺 Kidney Disease Prediction (Flask Web App)
 
 ---
 
-## 📌 About Project
+## 📌 Project Overview
 
-This project predicts Chronic Kidney Disease (CKD) using Machine Learning.
+This project predicts **Chronic Kidney Disease (CKD)** using Machine Learning.
 
-It is converted into a web application using Flask and deployed on AWS EC2.
+It is now a **web-based application** built using Flask and deployed on cloud.
+
+---
+
+## 🧠 Machine Learning Details
+
+* Algorithm: **Naive Bayes (GaussianNB)**
+* Features: **24 medical parameters**
+* Output:
+
+  * CKD (Kidney Disease Detected)
+  * NOT CKD (Healthy)
 
 ---
 
 ## 🚀 Features
 
-* Machine Learning model (Naive Bayes)
-* Flask web application
-* Input form with 24 medical features
-* Auto-fill demo button
-* Real-time prediction
+* 🌐 Web-based interface (Flask)
+* 📊 Real-time prediction
+* ⚡ Auto-fill demo button
+* ☁️ AWS EC2 deployment
 
 ---
 
-## 📂 Dataset
+## 📂 Project Structure
 
-Dataset is already included in this repository:
-
-* dataset/train.csv
-* dataset/test.csv
+```
+Chronic-Kidney-Disease/
+│
+├── dataset/
+├── model/
+├── templates/
+│   └── index.html
+├── webapp.py
+├── requirements.txt
+└── README.md
+```
 
 ---
 
 ## ⚙️ How to Run on Server (EC2 / Linux)
 
-### 🧩 Step 1: Connect to server
+### 🧩 Step 1: Connect to EC2
 
 ```bash
 ssh ubuntu@YOUR-IP
@@ -48,7 +84,16 @@ cd Chronic-Kidney-Disease
 
 ---
 
-### 🧩 Step 3: Create virtual environment
+### 🧩 Step 3: Install system dependencies
+
+```bash
+sudo apt update
+sudo apt install python3-pip python3.12-venv -y
+```
+
+---
+
+### 🧩 Step 4: Create virtual environment
 
 ```bash
 python3 -m venv venv
@@ -57,7 +102,7 @@ source venv/bin/activate
 
 ---
 
-### 🧩 Step 4: Install dependencies
+### 🧩 Step 5: Install dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -66,7 +111,7 @@ pip install flask
 
 ---
 
-### 🧩 Step 5: Run application
+### 🧩 Step 6: Run application
 
 ```bash
 python3 webapp.py
@@ -74,7 +119,7 @@ python3 webapp.py
 
 ---
 
-### 🌍 Step 6: Open in browser
+### 🌍 Step 7: Open in browser
 
 ```
 http://YOUR-IP:5000
@@ -89,25 +134,13 @@ http://YOUR-IP:5000
 
 ---
 
-## 🎓 Improvements Made
-
-* Fixed sklearn errors
-* Converted GUI project to web app
-* Added frontend UI
-* Added auto-fill demo feature
-* Converted numeric output (1.0 → CKD)
-* Deployed on AWS EC2
-
----
-
 ## 👨‍💻 About Me
 
 Hi, I'm **Dinesh** 👋
-I built this project as part of Machine Learning and Web Development learning.
+Machine Learning Enthusiast | Web Developer
 
-* 🎓 Developer
-* 💡 Interested in AI & ML
-* 🚀 Built and deployed on AWS
+* Interested in AI & ML
+* Built and deployed on AWS EC2
 
 ---
 
@@ -117,4 +150,6 @@ I built this project as part of Machine Learning and Web Development learning.
 
 ---
 
-⭐ If you like this project, give it a star!
+## ⭐ Support
+
+If you like this project, give it a ⭐ on GitHub!
